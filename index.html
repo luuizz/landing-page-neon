@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Landing Page Neon</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
 
     <section class="s-hero">
         <div class="container">
-            <div class="texto">
+            <div class="texto" data-aos="fade-right">
                 <h3> Abra sua conta, é só baixar o app!</h3>
                 <h1>A conta digital certa pra cuidar bem do seu dinheiro</h1>
                 <button class="btn-primary">Abra sua conta digital</button>
@@ -64,8 +65,8 @@
                 </ul>
             </div>
             <div class="area-image">
-                <h2>Banco 100% digital</h2>
-                <div class="image">
+                <h2 data-aos="fade-left">Banco 100% digital</h2>
+                <div class="image" data-aos="zoom-in">
                     <img src="./assets/card-neon-front.png" alt="Frente do cartão Neon escrito Gilberto Prado" class="card-front">
                     <img src="./assets/card-neon-back.png" alt="Parte de trás do cartão Neon contendo os dados do Gilberto Prado" class="card-back">
                     <img src="./assets/circle-neon.svg" alt="Círculo padrão da marca Neon" class="circle">
@@ -78,10 +79,10 @@
         <div class="container">
             <div class="left-area">
                 <div class="illustra-mockup">
-                    <img src="./assets/circle-mockup.svg" class="circle" alt="Círculo representando o padrão da marca">
-                    <img src="./assets/mockup-iphone.svg" alt="Vetor de um celular com uma das telas do aplicativo Neon onde mostra as principais funcionalidades" class="mockup">
+                    <img src="./assets/circle-mockup.svg" class="circle" data-aos="fade-left" alt="Círculo representando o padrão da marca">
+                    <img src="./assets/mockup-iphone.svg" data-aos="flip-right" alt="Vetor de um celular com uma das telas do aplicativo Neon onde mostra as principais funcionalidades" class="mockup">
                 </div>
-                <div class="text">
+                <div class="text" data-aos="fade-up">
                     <div class="icon">
                         <img src="./assets/icon-neon.svg" class="icon" alt="Avatar do Neon">
                     </div>
@@ -105,7 +106,7 @@
                 </div>
             </div>
             <div class="right-area">
-                <div class="main-text">
+                <div class="main-text" data-aos="fade-left">
                     <h2>Resolva sua vida direto pelo app Neon!</h2>
                     <ul>
                         <li>
@@ -143,7 +144,7 @@
                     </ul>
                     <a href="#" class="btn">Conheça outros produtos</a>
                 </div>
-                <div class="box-card">
+                <div class="box-card" data-aos="fade-left">
                     <div class="text">
                         <h2>Neon Pejota</h2>
                         <h3>Contas digitais PJ gratuitas para decolar seu negócio!</h3>
@@ -161,13 +162,13 @@
 
     <section class="s-depoimentos">
         <div class="container">
-            <div class="top">
+            <div class="top" data-aos="fade-right">
                 <h2><span>Prático, fácil, moderno</span>
                     Você resolve tudo sem estresse 😊</h2>
                 <div class="swiper-pagination"></div>
             </div>
 
-            <div class="slide-depoimentos">
+            <div class="slide-depoimentos" data-aos="fade-up">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="card-depoimento">
@@ -216,7 +217,7 @@
 
     <section class="s-conta-digital">
         <div class="container">
-            <div class="text">
+            <div class="text" data-aos="fade-right">
                 <h2><span>Aproveite</span>Domine o seu dinheiro com uma conta 100% digital</h2>
                 <ul>
                     <li>
@@ -253,9 +254,9 @@
                 <button class="btn-primary">Abra sua conta digital</button>
             </div>
             <div class="image">
-                <img src="./assets/mockup-cash-digital.svg" class="mockup-01" alt="Mockup de um celular iPhone, na tela está exibindo um comprovante de transferência entre duas pessoas">
-                <img src="./assets/mockup-login.png" class="mockup-02" alt="Mockup de um celular iPhone, na tela está exibindo a tela de login do aplicativo Neon, contendo uma explicação sobre o aplicativo, o cartão neon e um botão para seguir com o login">
-                <img src="./assets/circle-cash-digital.svg" class="circle" alt="Círculo abstrato com uma cor de gradiente transparent em uma de suas pontas">
+                <img src="./assets/mockup-cash-digital.svg" data-aos="fade-up" class="mockup-01" alt="Mockup de um celular iPhone, na tela está exibindo um comprovante de transferência entre duas pessoas">
+                <img src="./assets/mockup-login.png" class="mockup-02" data-aos="fade-down" alt="Mockup de um celular iPhone, na tela está exibindo a tela de login do aplicativo Neon, contendo uma explicação sobre o aplicativo, o cartão neon e um botão para seguir com o login">
+                <img src="./assets/circle-cash-digital.svg" class="circle" data-aos="zoom-in" alt="Círculo abstrato com uma cor de gradiente transparent em uma de suas pontas">
             </div>
         </div>
     </section>
@@ -375,6 +376,7 @@
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     var swiper = new Swiper(".slide-depoimentos", {
       slidesPerView: 3,
@@ -397,6 +399,11 @@
             spaceBetween: 32,
         }
       }
+    });
+
+    AOS.init({
+        once: true,
+        duration: 1000
     });
     </script>
 </body>
